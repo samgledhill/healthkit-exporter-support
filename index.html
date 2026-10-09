@@ -142,38 +142,87 @@
             <h2>🚀 Getting Started</h2>
             <div class="steps">
                 <ol>
-                    <li><strong>Open the app</strong> and tap "Request Permissions & Fetch Data"</li>
-                    <li><strong>Grant permissions</strong> for the health data types you want to export</li>
-                    <li><strong>Tap "Fetch Health Data"</strong> to load your last 7 days of data</li>
-                    <li><strong>Choose export format:</strong> CSV (for spreadsheets) or JSON (for developers)</li>
-                    <li><strong>Share your data</strong> via email, AirDrop, or save to Files app</li>
+                    <li><strong>Open the app</strong> and grant Health app permissions for the data types you want to export</li>
+                    <li><strong>Select your metrics</strong> from the list (free users can export 8 core metrics; Pro unlocks 26 more)</li>
+                    <li><strong>Choose your date range</strong> (free: last 7 days; Pro: any dates)</li>
+                    <li><strong>Pick your format:</strong> CSV (for spreadsheets like Excel or Google Sheets) or JSON (for scripts and tools)</li>
+                    <li><strong>Tap Export</strong> and share via email, AirDrop, or save to the Files app</li>
                 </ol>
+            </div>
+            <div style="text-align: center; margin-top: 16px;">
+                <a href="export-guide.html" style="color: #007bff; text-decoration: none; font-weight: 500; font-size: 16px;">📖 Read the full step-by-step guide: How to Export Apple Health Data to CSV or Excel →</a>
             </div>
         </div>
 
         <div class="section">
-            <h2>📱 What Data Can I Export?</h2>
-            <div class="features">
-                <div class="feature">
-                    <h4>👟 Steps</h4>
-                    <p>Daily step counts</p>
-                </div>
-                <div class="feature">
-                    <h4>💓 Heart Rate</h4>
-                    <p>Average daily heart rate</p>
-                </div>
-                <div class="feature">
-                    <h4>⚖️ Weight</h4>
-                    <p>Most recent weight entries</p>
-                </div>
-                <div class="feature">
-                    <h4>😴 Sleep</h4>
-                    <p>Total sleep duration</p>
-                </div>
+            <h2>📱 Free vs Pro Features</h2>
+            
+            <h3>✅ Free (No Purchase Required)</h3>
+            <p><strong>Metrics:</strong> Steps, Heart Rate, Weight (most recent), Sleep (total and sleep stages: Core, REM, Deep, Asleep)</p>
+            <p><strong>Date Range:</strong> Last 7 days</p>
+            <p><strong>Export Formats:</strong> CSV and JSON (summary format: one row per day)</p>
+            <p><strong>Export Limit:</strong> Up to 10 exports per day</p>
+
+            <h3>⭐ Pro (One-Time In-App Purchase)</h3>
+            <p><strong>Date Range:</strong> Any start and end date – export your full history or specific periods</p>
+            <p><strong>26 Additional Metrics:</strong></p>
+            <ul>
+                <li><strong>Activity & Energy:</strong> Walking/Running Distance, Cycling Distance, Swimming Distance, Flights Climbed, Exercise Minutes, Total Energy (active + resting), Resting Energy</li>
+                <li><strong>Heart & Breathing:</strong> Resting Heart Rate, Walking Heart Rate Average, HRV (SDNN), Respiratory Rate, VO2 Max, Blood Oxygen</li>
+                <li><strong>Body Composition:</strong> Body Fat %, Lean Body Mass, BMI, Body Temperature (manual and average), Wrist Temperature (overnight from Apple Watch)</li>
+                <li><strong>Blood:</strong> Blood Pressure (systolic and diastolic, most recent or daily average), Blood Glucose (most recent or daily average)</li>
+                <li><strong>Sleep (iOS 18+):</strong> Breathing Disturbances (overnight), Sleep Apnea Events</li>
+                <li><strong>Mindfulness & Hearing:</strong> Mindful Minutes, Environmental Audio (dB), Headphone Audio (dB)</li>
+            </ul>
+            <p><strong>Raw Export:</strong> Tick "Export as Raw data" on any metric to get a second file with every individual reading timestamped, including source device/app</p>
+            <p><strong>Unlimited Exports:</strong> No daily limit</p>
+        </div>
+
+        <div class="section">
+            <h2>📊 Export Formats Explained</h2>
+            
+            <h3>Summary Export (Free & Pro)</h3>
+            <p>One row per day for each metric you select. Perfect for tracking trends over time in a spreadsheet.</p>
+            <p><strong>Example columns:</strong> Date, Steps, Heart Rate (bpm), Weight (kg), Sleep (hours)</p>
+            
+            <h3>Raw Export (Pro Only)</h3>
+            <p>Every individual reading with timestamp, value, unit and source device/app. Tick "Export as Raw data" for any metric to get both summary and raw files.</p>
+            <p><strong>Example columns:</strong> Timestamp, Date, Time, Metric, Value, Unit, Source, Source Bundle ID</p>
+            <p><strong>Note:</strong> Raw export files can be very large if you export years of data for metrics recorded frequently (like heart rate).</p>
+        </div>
+
+        <div class="section">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="issue">
+                <strong>Q: Which metrics require iOS 18?</strong><br>
+                A: Breathing Disturbances (overnight) and Sleep Apnea Events are only available on iOS 18 and later with a compatible Apple Watch.
             </div>
-            <p><strong>Time Range:</strong> Last 7 days of data<br>
-            <strong>Formats:</strong> CSV (Excel-compatible) and JSON<br>
-            <strong>Units:</strong> Metric or Imperial system support</p>
+            
+            <div class="issue">
+                <strong>Q: Can I restore my Pro purchase on another device?</strong><br>
+                A: Yes! Open the app, go to Manage Purchases, and tap "Restore Purchases". Make sure you're signed in to the same Apple ID.
+            </div>
+            
+            <div class="issue">
+                <strong>Q: Why is my export missing recent data?</strong><br>
+                A: Make sure your Apple Watch or other devices have synced with the Health app. Open the Health app to trigger a sync, then try exporting again.
+            </div>
+            
+            <div class="issue">
+                <strong>Q: What's the difference between "most recent" and "average" for weight, blood pressure and blood glucose?</strong><br>
+                A: "Most recent" gives you the last recorded value for each day. "Average" (Pro only for BP and glucose) calculates the daily average if you take multiple readings per day.
+            </div>
+            
+            <div class="issue">
+                <strong>Q: Can I export workout data?</strong><br>
+                A: Not yet. The app currently exports health metrics like steps, heart rate and distance, but not structured workout sessions.
+            </div>
+            
+            <div class="issue">
+                <strong>Q: What does "Total Energy" include?</strong><br>
+                A: Total Energy combines Active Energy (calories burned through activity) and Resting Energy (basal metabolic rate) to match the total shown in the Health app.
+            </div>
         </div>
 
         <div class="section">
@@ -182,28 +231,33 @@
                 <h3>Common Issues & Solutions</h3>
                 
                 <div class="issue">
-                    <strong>❌ "No data found for the last 7 days"</strong><br>
-                    Solution: Check Health app permissions. Go to Health app → Sharing → Apps → HealthKit Exporter and ensure data types are enabled.
+                    <strong>❌ "No data found" or data shows "N/A"</strong><br>
+                    Solution: Check Health app permissions. Go to Settings → Privacy & Security → Health → My Health Export and make sure the data types you want to export are enabled.
                 </div>
                 
                 <div class="issue">
-                    <strong>❌ Data shows "N/A" or "Unauthorized"</strong><br>
-                    Solution: Grant permissions for specific data types. Tap "Open Health Permissions" in the app or manually enable in Health app settings.
+                    <strong>❌ Can't select certain metrics (grayed out)</strong><br>
+                    Solution: Metrics beyond the 8 free options require the Pro upgrade. Tap the metric to see the upgrade prompt.
                 </div>
                 
                 <div class="issue">
-                    <strong>❌ Export/sharing failed</strong><br>
-                    Solution: Try closing and reopening the app. Ensure you have enough storage space and a stable connection for sharing.
+                    <strong>❌ Can't change the date range</strong><br>
+                    Solution: Custom date ranges require the Pro upgrade. Free users can export the last 7 days only.
+                </div>
+                
+                <div class="issue">
+                    <strong>❌ "Free plan allows up to 10 exports per day"</strong><br>
+                    Solution: You've reached the daily free export limit. Wait until tomorrow, or upgrade to Pro for unlimited exports.
+                </div>
+                
+                <div class="issue">
+                    <strong>❌ Export or sharing failed</strong><br>
+                    Solution: Check that you have enough storage space on your device. For very large exports, try a shorter date range or fewer metrics.
                 </div>
                 
                 <div class="issue">
                     <strong>❌ App crashes or freezes</strong><br>
-                    Solution: Force-close the app and restart. If the issue persists, restart your iPhone and try again.
-                </div>
-                
-                <div class="issue">
-                    <strong>❌ Missing recent data</strong><br>
-                    Solution: Make sure your iPhone has synced recent data. Check that your Apple Watch or other devices have completed their sync.
+                    Solution: Force-close the app (swipe up from the app switcher) and reopen it. If the problem continues, restart your iPhone.
                 </div>
             </div>
         </div>
@@ -212,10 +266,12 @@
             <h2>🔒 Privacy & Security</h2>
             <div class="privacy-note">
                 <h4>Your Data Stays Private</h4>
-                <p><strong>✓ No cloud storage:</strong> All data processing happens on your device<br>
-                <strong>✓ No data collection:</strong> We don't collect, store, or transmit your health data<br>
-                <strong>✓ Local export only:</strong> You control where your exported data goes<br>
-                <strong>✓ Apple HealthKit security:</strong> Uses Apple's secure HealthKit framework</p>
+                <p><strong>✓ No data collection:</strong> The app collects no data. No analytics, no crash reports, no tracking.<br>
+                <strong>✓ Read-only access:</strong> The app reads your Health data but never writes or changes it<br>
+                <strong>✓ Local processing:</strong> All data processing happens on your iPhone<br>
+                <strong>✓ You control export:</strong> Health data only leaves your device when you choose to export and share a file<br>
+                <strong>✓ Apple HealthKit security:</strong> Uses Apple's secure HealthKit framework with permissions you control</p>
+                <p style="margin-top: 12px;"><a href="privacy.html" style="color: #007bff; text-decoration: none; font-weight: 500;">Read our full Privacy Policy →</a></p>
             </div>
         </div>
 
@@ -223,10 +279,12 @@
             <h2>💡 Tips for Best Results</h2>
             <div class="steps">
                 <ul style="margin: 0; padding-left: 20px;">
-                    <li><strong>Regular syncing:</strong> Ensure your devices sync regularly with Health app</li>
-                    <li><strong>Permission review:</strong> Periodically check that all needed permissions are enabled</li>
-                    <li><strong>Data verification:</strong> Cross-check exported data with Health app if results seem unexpected</li>
-                    <li><strong>File management:</strong> Export data regularly and organize your health data files</li>
+                    <li><strong>Keep devices synced:</strong> Open the Health app regularly to sync data from your Apple Watch and other connected devices</li>
+                    <li><strong>Grant permissions up front:</strong> Allow access to all the metrics you might want to export – you can always deselect them later</li>
+                    <li><strong>Use summary for trends:</strong> Summary exports (one row per day) work great for spreadsheets and charts</li>
+                    <li><strong>Use raw for detail:</strong> Raw export (Pro) gives you every reading with timestamps – useful for detailed analysis or sharing specific data with your doctor</li>
+                    <li><strong>Check your units:</strong> Choose metric or imperial in the app's first-run setup (or in Settings) to match your preferred measurement system</li>
+                    <li><strong>Large exports take time:</strong> Exporting years of data for frequently-recorded metrics (like heart rate) can take a minute or two – watch the progress bar</li>
                 </ul>
             </div>
         </div>
@@ -235,7 +293,7 @@
             <div class="contact">
                 <h3>📧 Need More Help?</h3>
                 <p>If you're still experiencing issues or have feature requests, we're here to help!</p>
-                <p><a href="mailto:sam@samgledhill.au?subject=HealthKit%20Exporter%20Support" class="email-link">sam@samgledhill.au</a></p>
+                <p><a href="mailto:sam@samgledhill.au?subject=My%20Health%20Export%20Support" class="email-link">sam@samgledhill.au</a></p>
                 <p style="margin-top: 16px; font-size: 14px; color: #6c757d;">
                     When contacting support, please include your iOS version and a description of the issue.
                 </p>
@@ -243,8 +301,9 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #6c757d; font-size: 14px;">
-            <p>© 2025 Sam Gledhill. My Health Export v2.2</p>
+            <p>© 2026 Sam Gledhill. My Health Export</p>
             <p>Made with ❤️ for health data transparency</p>
+            <p style="margin-top: 12px;"><a href="privacy.html" style="color: #6c757d; text-decoration: none;">Privacy Policy</a></p>
         </div>
     </div>
     <section class="legal">
